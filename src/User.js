@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 const User = props => {
     return (
         <li>
-            {username}
+            {props.user.username} played {props.hide ? '*' : props.user.games} games.
         </li>
     );
 };
 
 User.propTypes = {
-    user: PropTypes.object.isRequired
+    user: PropTypes.object.isRequired,
+    hide: PropTypes.bool.isRequired
 };
 
 export default User;
